@@ -7,35 +7,45 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="卒業旅行しおり">
   <meta name="format-detection" content="telephone=no, address=no">
-  <meta property="og:title" content="🗻 卒業旅行しおり 2026｜富士急 &amp; 河口湖">
-  <meta property="og:description" content="4月6日〜7日 6人で行く卒業旅行のスケジュール・バス座席・BBQ計画・移動ルートをまとめました🔥">
+  <meta property="og:title" content="卒業旅行しおり 2026｜富士急 &amp; 河口湖">
+  <meta property="og:description" content="4月6日〜7日 6人で行く卒業旅行のスケジュール・バス座席・BBQ計画・移動ルートをまとめました">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://images.unsplash.com/photo-1578637387939-43c525550085?w=800&q=80">
   <meta name="twitter:card" content="summary_large_image">
-  <title>🗻 卒業旅行しおり 2026</title>
+  <title>卒業旅行しおり 2026 | 富士急 &amp; 河口湖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --fuji-blue: #1e4d8c;
-      --fuji-light: #3a7bd5;
-      --sakura: #f4a0b5;
-      --green: #2d7a4f;
-      --orange: #e87c2a;
-      --text: #1a1a2e;
-      --muted: #4a5568; /* ✅ コントラスト改善: #6b7280→#4a5568 */
-      --bg: #f4f7fb;
-      --card: #ffffff;
-      --radius: 16px;
-      --shadow: 0 2px 16px rgba(0,0,0,0.08);
+      --cream: #F7F4EE;
+      --white: #FFFFFF;
+      --ink: #1C1714;
+      --muted: #6B6560;
+      --rule: #E8E2D9;
+      --gold: #C4813A;
+      --blue: #2A5298;
+      --terra: #C45B52;
+      --forest: #2A6B3C;
+      --font-display: 'Cormorant Garamond', 'Hiragino Mincho ProN', 'ヒラギノ明朝 ProN', 'Yu Mincho', serif;
+      --font-body: 'DM Sans', -apple-system, 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic UI', sans-serif;
+      --radius-sm: 4px;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --shadow: 0 1px 0 var(--rule), 0 2px 12px rgba(0,0,0,0.04);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
       --safe-top: env(safe-area-inset-top);
       --safe-bottom: env(safe-area-inset-bottom);
       --safe-left: env(safe-area-inset-left);
       --safe-right: env(safe-area-inset-right);
     }
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
     html { font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
     body {
-      font-family: -apple-system, 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic UI', sans-serif;
-      background: var(--bg); color: var(--text); line-height: 1.6;
+      font-family: var(--font-body);
+      background: var(--cream); color: var(--ink); line-height: 1.6;
       -webkit-font-smoothing: antialiased; overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
     }
@@ -43,195 +53,259 @@
     /* ===== STICKY NAV ===== */
     .sticky-nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,0.92);
+      background: rgba(247,244,238,0.94);
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      padding: 10px 0 10px 16px;
-      padding-top: calc(10px + var(--safe-top));
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 0 0 0 16px;
+      padding-top: var(--safe-top);
+      border-bottom: 1px solid var(--rule);
       overflow-x: auto; -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; position: relative;
+      scrollbar-width: none;
     }
     .sticky-nav::-webkit-scrollbar { display: none; }
-    /* ✅ 右側フェードで「続きあり」を示す */
     .sticky-nav::after {
       content: '';
-      position: fixed;
-      right: 0; top: 0;
+      position: fixed; right: 0; top: 0;
       height: calc(44px + var(--safe-top));
       width: 48px;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.95));
-      pointer-events: none;
-      z-index: 101;
+      background: linear-gradient(to right, transparent, rgba(247,244,238,0.97));
+      pointer-events: none; z-index: 101;
     }
-    .nav-pills { display: flex; gap: 8px; width: max-content; padding-right: 48px; }
-    .nav-pill {
-      display: inline-flex; align-items: center; gap: 5px;
-      background: #f0f4fb; border: none; border-radius: 100px;
-      padding: 0 16px;
-      font-size: 13px; font-weight: 700; color: var(--fuji-blue);
-      white-space: nowrap; cursor: pointer; text-decoration: none;
-      min-height: 44px; /* ✅ Appleの推奨タップ領域 44px */
+    .nav-links { display: flex; width: max-content; padding-right: 48px; }
+    .nav-link {
+      display: inline-flex; align-items: center;
+      padding: 0 13px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      color: var(--muted); white-space: nowrap; cursor: pointer;
+      text-decoration: none; min-height: 44px;
       -webkit-user-select: none; user-select: none;
-      transition: background 0.15s, transform 0.1s;
+      transition: color 0.15s;
+      border-bottom: 2px solid transparent;
+      position: relative; top: 1px;
     }
-    .nav-pill:active { background: #dce8fb; transform: scale(0.97); }
+    .nav-link:hover, .nav-link:focus-visible { color: var(--ink); border-bottom-color: var(--gold); }
+    .nav-link:active { color: var(--gold); }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes hero-slide-up {
+      from { transform: translateY(28px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    @keyframes hero-fade-in {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes section-appear {
+      from { transform: translateY(16px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
 
     /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(160deg, #0f2d6e 0%, #1e4d8c 40%, #3a7bd5 75%, #7ab8f5 100%);
-      color: white; text-align: center; padding: 48px 20px 80px;
-      padding-top: calc(48px + var(--safe-top));
+      background: linear-gradient(170deg,
+        #0B1D3A 0%, #152D5C 20%, #2A5298 48%,
+        #8B9DC3 70%, #C4813A 84%, #F7F4EE 100%
+      );
+      color: white; text-align: center;
+      padding: 60px 24px 80px;
+      padding-top: calc(60px + var(--safe-top));
       position: relative; overflow: hidden;
     }
     .hero::after {
-      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 50px;
-      background: var(--bg); clip-path: ellipse(55% 100% at 50% 100%);
+      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 56px;
+      background: var(--cream);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
     }
-    .hero-mountain { font-size: 72px; margin-bottom: 10px; display: block; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25)); }
-    .hero-title { font-size: clamp(24px, 7vw, 38px); font-weight: 900; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.25); margin-bottom: 6px; }
-    .hero-sub { font-size: 14px; opacity: 0.85; margin-bottom: 18px; }
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 10px; font-weight: 600; letter-spacing: 0.25em;
+      opacity: 0.65; text-transform: uppercase; margin-bottom: 16px;
+      animation: hero-fade-in 0.6s var(--ease-out) 0.1s both;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      line-height: 1.0; margin-bottom: 22px;
+      animation: hero-slide-up 0.8s var(--ease-out) 0.2s both;
+    }
+    .hero-title-ja {
+      display: block; font-size: clamp(24px, 7vw, 38px);
+      font-weight: 400; font-style: italic; letter-spacing: 0.1em; opacity: 0.85;
+    }
+    .hero-title-en {
+      display: block; font-size: clamp(56px, 16vw, 96px);
+      font-weight: 700; letter-spacing: 0.04em;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.25);
+    }
+    .hero-meta {
+      font-size: 11px; letter-spacing: 0.14em; opacity: 0.7; line-height: 1.9;
+      margin-bottom: 22px;
+      animation: hero-fade-in 0.6s var(--ease-out) 0.5s both;
+    }
     .hero-badge {
-      display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.35); border-radius: 100px;
-      padding: 9px 20px; font-size: 14px; font-weight: 700;
+      display: inline-block; border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 2px; padding: 7px 18px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em; opacity: 0.82;
+      animation: hero-fade-in 0.6s var(--ease-out) 0.7s both;
     }
 
     /* ===== CONTAINER ===== */
     .container {
       max-width: 640px; margin: 0 auto;
-      padding: 0 14px calc(60px + var(--safe-bottom));
-      padding-left: max(14px, var(--safe-left));
-      padding-right: max(14px, var(--safe-right));
+      padding: 0 16px calc(60px + var(--safe-bottom));
+      padding-left: max(16px, var(--safe-left));
+      padding-right: max(16px, var(--safe-right));
     }
 
     /* ===== SECTION ===== */
-    .section { margin-top: 32px; }
-    .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-    .section-icon { width: 38px; height: 38px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 19px; flex-shrink: 0; }
-    .section-title { font-size: 19px; font-weight: 800; color: var(--fuji-blue); }
+    .section { margin-top: 44px; animation: section-appear 0.5s var(--ease-out) 0.15s both; }
+
+    .section-header {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--rule);
+    }
+    .section-num {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 11vw, 62px); font-weight: 300;
+      line-height: 0.85; color: transparent;
+      -webkit-text-stroke: 1px var(--gold);
+      flex-shrink: 0; letter-spacing: -0.02em; margin-top: -2px;
+    }
+    .section-header-body { padding-top: 6px; }
+    .section-title { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: 0.01em; line-height: 1.2; }
+    .section-sub { font-size: 11px; color: var(--muted); margin-top: 3px; letter-spacing: 0.04em; }
 
     /* ===== CARD ===== */
-    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; margin-bottom: 10px; }
+    .card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--rule); padding: 18px; margin-bottom: 10px; }
 
     /* ===== MEMBERS ===== */
-    .members-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .member-card { background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 14px 8px; text-align: center; }
-    .member-avatar { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; margin: 0 auto 7px; }
-    .member-name { font-size: 12px; font-weight: 700; line-height: 1.3; }
+    .members-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .member-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--rule); padding: 16px 8px 14px; text-align: center; }
+    .member-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 1.5px solid var(--rule); background: var(--cream);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--muted);
+      margin: 0 auto 8px;
+    }
+    .member-name { font-size: 11px; font-weight: 700; line-height: 1.4; color: var(--ink); }
     .member-role { font-size: 11px; color: var(--muted); margin-top: 3px; }
 
     /* ===== DAY HEADER ===== */
-    .day-header { border-radius: 14px; padding: 16px 18px; margin-bottom: 18px; display: flex; align-items: center; gap: 14px; }
-    .day-num { font-size: 28px; font-weight: 900; line-height: 1.1; }
-    .day-info-title { font-size: 15px; font-weight: 800; }
-    .day-info-date { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+    .day-header { border-radius: var(--radius-lg); padding: 20px 20px 18px; margin-bottom: 20px; display: flex; align-items: center; gap: 18px; color: white; }
+    .day-header--1 { background: var(--blue); }
+    .day-header--2 { background: var(--forest); }
+    .day-display { font-family: var(--font-display); font-size: 11px; font-weight: 400; letter-spacing: 0.18em; line-height: 1; opacity: 0.72; flex-shrink: 0; text-transform: uppercase; }
+    .day-number { display: block; font-size: clamp(60px, 17vw, 82px); font-weight: 700; line-height: 0.85; letter-spacing: -0.02em; opacity: 1; margin-top: 4px; }
+    .day-meta { flex: 1; }
+    .day-meta-date { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; opacity: 0.72; margin-bottom: 5px; }
+    .day-meta-subtitle { font-size: 13px; font-weight: 700; line-height: 1.45; }
 
     /* ===== TIMELINE ===== */
     .timeline { position: relative; padding-left: 18px; }
-    .timeline::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--fuji-light), var(--sakura)); border-radius: 2px; }
-    .tl-item { position: relative; padding: 0 0 18px 26px; }
+    .timeline::before { content: ''; position: absolute; left: 9px; top: 10px; bottom: 10px; width: 1px; background: var(--rule); border-radius: 1px; }
+    .tl-item { position: relative; padding: 0 0 20px 28px; }
     .tl-item:last-child { padding-bottom: 0; }
-    .tl-dot { position: absolute; left: -9px; top: 4px; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
-    .tl-time { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
-    .tl-card { background: var(--card); border-radius: 12px; padding: 13px 14px; box-shadow: 0 1px 8px rgba(0,0,0,0.07); }
-    .tl-title { font-size: 14px; font-weight: 800; margin-bottom: 4px; line-height: 1.4; }
-    .tl-desc { font-size: 13px; color: #4a5568; line-height: 1.65; } /* ✅ 12.5px→13px */
-    .tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 100px; margin-top: 6px; margin-right: 4px; }
+    .tl-dot { position: absolute; left: -7px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: var(--white); border: 1.5px solid var(--gold); box-shadow: 0 0 0 2px var(--cream); }
+    .tl-time { font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 5px; letter-spacing: 0.02em; }
+    .tl-card { background: var(--white); border-radius: 0 var(--radius) var(--radius) var(--radius); padding: 14px 15px; border: 1px solid var(--rule); border-left: 2px solid var(--gold); }
+    .tl-title { font-size: 14px; font-weight: 700; margin-bottom: 5px; line-height: 1.4; color: var(--ink); }
+    .tl-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 2px; margin-top: 7px; margin-right: 4px; letter-spacing: 0.02em; }
 
     /* ===== INFO ROW ===== */
-    .info-row { display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid #f0f0f0; }
+    .info-row { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--rule); }
     .info-row:last-child { border-bottom: none; padding-bottom: 0; }
     .info-row:first-child { padding-top: 0; }
-    .info-label { font-size: 11px; font-weight: 700; color: var(--fuji-blue); min-width: 60px; padding-top: 2px; flex-shrink: 0; }
-    .info-value { font-size: 13px; color: var(--text); flex: 1; }
+    .info-label { font-size: 10px; font-weight: 700; color: var(--blue); min-width: 56px; padding-top: 3px; flex-shrink: 0; letter-spacing: 0.08em; text-transform: uppercase; }
+    .info-value { font-size: 13px; color: var(--ink); flex: 1; line-height: 1.6; }
 
     /* ===== SEATS ===== */
     .seat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
-    .seat-badge { background: #e8f4fd; border: 1.5px solid var(--fuji-light); border-radius: 8px; padding: 9px 8px; text-align: center; font-size: 13px; font-weight: 800; color: var(--fuji-blue); }
+    .seat-badge { background: var(--cream); border: 1px solid var(--rule); border-radius: var(--radius-sm); padding: 9px 8px; text-align: center; font-size: 14px; font-weight: 700; color: var(--blue); font-family: var(--font-display); letter-spacing: 0.06em; }
 
     /* ===== BBQ ===== */
     .bbq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 10px; }
-    .bbq-item { background: #fffbf5; border: 1.5px solid #ffe0b2; border-radius: 10px; padding: 10px 11px; }
-    .bbq-item-title { font-size: 11px; font-weight: 800; color: #a04000; margin-bottom: 5px; }
-    .bbq-item li { list-style: none; font-size: 12px; color: var(--text); padding: 1.5px 0; }
-    .bbq-item li::before { content: '• '; color: var(--orange); }
+    .bbq-item { background: #FBF8F2; border: 1px solid var(--rule); border-radius: var(--radius-sm); padding: 10px 11px; }
+    .bbq-item-title { font-size: 11px; font-weight: 700; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.04em; }
+    .bbq-item li { list-style: none; font-size: 12px; color: var(--ink); padding: 1.5px 0; }
+    .bbq-item li::before { content: '– '; color: var(--muted); }
 
     /* ===== ROUTE ===== */
-    .route-card { background: linear-gradient(135deg, #f0f8ff, #e8f5ee); border-radius: 12px; padding: 14px; border: 1.5px solid #b8d8f0; margin-top: 10px; }
-    .route-step { display: flex; align-items: center; gap: 6px; margin: 7px 0; font-size: 12.5px; font-weight: 600; flex-wrap: wrap; }
-    .route-badge { background: var(--fuji-blue); color: white; padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+    .route-card { background: #F5F2EC; border-radius: var(--radius); padding: 14px; border: 1px solid var(--rule); margin-top: 10px; }
+    .route-step { display: flex; align-items: center; gap: 6px; margin: 6px 0; font-size: 12.5px; font-weight: 500; flex-wrap: wrap; color: var(--ink); }
+    .route-badge { background: var(--blue); color: white; padding: 2px 9px; border-radius: 2px; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; }
 
     /* ===== ONSEN ===== */
-    .onsen-card { background: linear-gradient(135deg, #fff0f5, #ffe8f0); border-radius: 12px; padding: 14px; border: 1.5px solid #f4a0b5; margin-top: 10px; }
-    .onsen-title { font-size: 14px; font-weight: 800; color: #c0196a; margin-bottom: 8px; }
+    .onsen-card { background: #FBF4F2; border-radius: var(--radius); padding: 14px; border: 1px solid #E8CECA; margin-top: 10px; }
+    .onsen-title { font-size: 13px; font-weight: 700; color: var(--terra); margin-bottom: 8px; }
 
     /* ===== SUPER ===== */
-    .super-card { background: linear-gradient(135deg, #f0fff4, #e8f8ee); border-radius: 12px; padding: 14px; border: 1.5px solid #82c896; margin-top: 10px; }
+    .super-card { background: #F2F7F3; border-radius: var(--radius); padding: 14px; border: 1px solid #C5D8C8; margin-top: 10px; }
 
     /* ===== OPT ===== */
-    .opt-badge { background: #fff7ed; border: 1.5px dashed var(--orange); border-radius: 10px; padding: 10px 12px; font-size: 12px; color: #92400e; margin-top: 10px; line-height: 1.6; }
-    .opt-badge strong { color: var(--orange); }
+    .opt-badge { background: #FBF8F2; border: 1px dashed var(--gold); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.7; }
+    .opt-badge strong { color: var(--gold); }
 
     /* ===== ALERT ===== */
-    .alert { border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; display: flex; gap: 10px; align-items: flex-start; }
-    .alert-icon { font-size: 17px; flex-shrink: 0; margin-top: 1px; }
+    .alert { border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 8px; display: flex; gap: 10px; align-items: flex-start; }
+    .alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
     .alert-body { font-size: 13px; line-height: 1.65; }
-    .alert-title { font-weight: 800; margin-bottom: 2px; font-size: 13px; }
+    .alert-title { font-weight: 700; margin-bottom: 2px; font-size: 13px; }
 
     /* ===== HIGHLIGHT ===== */
-    .highlight { background: linear-gradient(135deg, #e8f4fd, #f0e8fd); border-radius: 10px; padding: 12px 14px; border-left: 4px solid var(--fuji-light); font-size: 13px; line-height: 1.7; margin-top: 10px; }
+    .highlight { background: #F5F2EC; border-radius: var(--radius-sm); padding: 12px 14px; border-left: 3px solid var(--blue); font-size: 13px; line-height: 1.7; margin-top: 10px; color: var(--ink); }
 
     /* ===== FACILITY ===== */
-    .facility-box { background: #fff8f0; border-radius: 10px; padding: 12px; border: 1px solid #ffd0a0; margin-top: 10px; }
-    .facility-title { font-size: 12px; font-weight: 800; color: #a04000; margin-bottom: 6px; }
-    .facility-row { font-size: 13px; color: var(--text); line-height: 1.9; }
+    .facility-box { background: #FBF8F2; border-radius: var(--radius-sm); padding: 12px; border: 1px solid #E8D9C4; margin-top: 10px; }
+    .facility-title { font-size: 11px; font-weight: 700; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .facility-row { font-size: 13px; color: var(--ink); line-height: 1.9; }
 
-    /* ===== CHECKLIST (✅ 機能するチェックボックス) ===== */
+    /* ===== CHECKLIST ===== */
     .checklist { list-style: none; }
-    .checklist li {
-      display: flex; align-items: center; gap: 12px;
-      padding: 10px 0; border-bottom: 1px solid #f5f5f5;
-      font-size: 14px; min-height: 44px; /* ✅ タップ領域確保 */
-      cursor: pointer;
-    }
+    .checklist li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; min-height: 44px; cursor: pointer; }
     .checklist li:last-child { border-bottom: none; }
     .checklist li label { display: flex; align-items: center; gap: 12px; width: 100%; cursor: pointer; }
-    .checklist input[type="checkbox"] {
-      width: 22px; height: 22px; flex-shrink: 0;
-      accent-color: var(--fuji-blue); /* ✅ iOSチェックカラー */
-      cursor: pointer;
-      border-radius: 6px;
-    }
+    .checklist input[type="checkbox"] { width: 20px; height: 20px; flex-shrink: 0; accent-color: var(--gold); cursor: pointer; }
     .checklist li.checked label { text-decoration: line-through; color: var(--muted); }
 
     /* ===== DIVIDER ===== */
-    .divider { height: 1.5px; background: linear-gradient(to right, transparent, #e0e0e0, transparent); margin: 24px 0; border-radius: 2px; }
+    .divider { height: 1px; background: var(--rule); margin: 28px 0; }
 
     /* ===== LINKS ===== */
-    a { color: var(--fuji-blue); font-weight: 700; text-decoration: none; }
+    a { color: var(--blue); font-weight: 600; text-decoration: none; }
     a:active { opacity: 0.7; }
 
     /* ===== MAP LINK ===== */
     .map-link {
       display: inline-flex; align-items: center; gap: 4px;
-      background: #e8f4fd; border-radius: 8px;
-      padding: 5px 10px; font-size: 12px; font-weight: 700;
-      color: var(--fuji-blue); margin-top: 6px;
-      min-height: 36px; /* タップしやすく */
+      background: var(--cream); border: 1px solid var(--rule); border-radius: var(--radius-sm);
+      padding: 6px 11px; font-size: 12px; font-weight: 600;
+      color: var(--blue); margin-top: 8px; min-height: 44px;
+      -webkit-user-select: none; user-select: none;
     }
 
     /* ===== FOOTER ===== */
-    .footer { text-align: center; padding: 40px 20px; padding-bottom: calc(40px + var(--safe-bottom)); color: var(--muted); font-size: 13px; }
-    .footer-emoji { font-size: 32px; display: block; margin-bottom: 8px; }
+    .footer { text-align: center; padding: 52px 24px; padding-bottom: calc(52px + var(--safe-bottom)); }
+    .footer-rule { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 24px; }
+    .footer-brand { font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: 0.14em; color: var(--ink); margin-bottom: 10px; }
+    .footer-body { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.7; }
+    .footer-meta { font-size: 11px; color: var(--muted); opacity: 0.55; letter-spacing: 0.07em; line-height: 1.9; }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 390px) {
+    @media (max-width: 374px) {
       .members-grid { grid-template-columns: repeat(2, 1fr); }
       .bbq-grid { grid-template-columns: 1fr; }
-      .hero-title { font-size: 22px; }
     }
     @media (min-width: 768px) {
-      .container { padding: 0 24px calc(60px + var(--safe-bottom)); }
+      .container { padding: 0 28px calc(60px + var(--safe-bottom)); }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
@@ -239,24 +313,27 @@
 
 <!-- ===== STICKY NAV ===== -->
 <nav class="sticky-nav">
-  <div class="nav-pills">
-    <a class="nav-pill" href="#members">👥 メンバー</a>
-    <a class="nav-pill" href="#day1">📅 1日目</a>
-    <a class="nav-pill" href="#day2">🌸 2日目</a>
-    <a class="nav-pill" href="#bus">🚌 バス</a>
-    <a class="nav-pill" href="#hotel">🏕️ 宿泊</a>
-    <a class="nav-pill" href="#route">🗺️ 移動</a>
-    <a class="nav-pill" href="#pack">🎒 持ち物</a>
-    <a class="nav-pill" href="#notes">📢 注意</a>
+  <div class="nav-links">
+    <a class="nav-link" href="#members">メンバー</a>
+    <a class="nav-link" href="#day1">Day 1</a>
+    <a class="nav-link" href="#day2">Day 2</a>
+    <a class="nav-link" href="#bus">バス</a>
+    <a class="nav-link" href="#hotel">宿泊</a>
+    <a class="nav-link" href="#route">移動</a>
+    <a class="nav-link" href="#pack">持ち物</a>
+    <a class="nav-link" href="#notes">注意</a>
   </div>
 </nav>
 
 <!-- ===== HERO ===== -->
 <div class="hero">
-  <span class="hero-mountain">🗻</span>
-  <div class="hero-title">卒業旅行しおり</div>
-  <div class="hero-sub">富士急ハイランド ＆ 河口湖・西湖エリア</div>
-  <div class="hero-badge">🌸 2026年4月6日（月）〜7日（火） 1泊2日</div>
+  <div class="hero-eyebrow">Graduation Trip 2026</div>
+  <h1 class="hero-title">
+    <span class="hero-title-ja">卒業旅行</span>
+    <span class="hero-title-en">FUJI TRIP</span>
+  </h1>
+  <div class="hero-meta">APR 6–7, 2026<br>富士急ハイランド &amp; 河口湖・西湖エリア</div>
+  <div class="hero-badge">6 PEOPLE &nbsp;·&nbsp; 1 NIGHT 2 DAYS</div>
 </div>
 
 <div class="container">
@@ -264,65 +341,70 @@
   <!-- MEMBERS -->
   <div class="section" id="members">
     <div class="section-header">
-      <div class="section-icon" style="background:#eef3fb;">👥</div>
-      <div class="section-title">メンバー 6人</div>
+      <div class="section-num">01</div>
+      <div class="section-header-body">
+        <div class="section-title">メンバー</div>
+        <div class="section-sub">6 PEOPLE</div>
+      </div>
     </div>
     <div class="members-grid">
-      <div class="member-card"><div class="member-avatar" style="background:#fce8ee;">🧑</div><div class="member-name">イシノ キズナ</div><div class="member-role">📋 幹事</div></div>
-      <div class="member-card"><div class="member-avatar" style="background:#e8f5ee;">🧑</div><div class="member-name">トヨタ マコト</div><div class="member-role">🚗 ドライバー</div></div>
-      <div class="member-card"><div class="member-avatar" style="background:#eef3fb;">🧑</div><div class="member-name">ヤマモト アユム</div><div class="member-role">📷 フォト担当</div></div>
-      <div class="member-card"><div class="member-avatar" style="background:#fff0e0;">🧑</div><div class="member-name">ヤマモト ハルト</div><div class="member-role">🍜 グルメ担当</div></div>
-      <div class="member-card"><div class="member-avatar" style="background:#f0e8fd;">🧑</div><div class="member-name">カワカミ タイチ</div><div class="member-role">🗺️ ナビ担当</div></div>
-      <div class="member-card"><div class="member-avatar" style="background:#e8f5ee;">🧑</div><div class="member-name">ウチヤマ ゴウヤ</div><div class="member-role">💰 会計担当</div></div>
+      <div class="member-card"><div class="member-avatar">イ</div><div class="member-name">イシノ キズナ</div><div class="member-role">📋 幹事</div></div>
+      <div class="member-card"><div class="member-avatar">ト</div><div class="member-name">トヨタ マコト</div><div class="member-role">🚗 ドライバー</div></div>
+      <div class="member-card"><div class="member-avatar">ヤ</div><div class="member-name">ヤマモト アユム</div><div class="member-role">📷 フォト担当</div></div>
+      <div class="member-card"><div class="member-avatar">ハ</div><div class="member-name">ヤマモト ハルト</div><div class="member-role">🍜 グルメ担当</div></div>
+      <div class="member-card"><div class="member-avatar">カ</div><div class="member-name">カワカミ タイチ</div><div class="member-role">🗺️ ナビ担当</div></div>
+      <div class="member-card"><div class="member-avatar">ウ</div><div class="member-name">ウチヤマ ゴウヤ</div><div class="member-role">💰 会計担当</div></div>
     </div>
   </div>
 
   <!-- DAY 1 -->
   <div class="section" id="day1">
     <div class="section-header">
-      <div class="section-icon" style="background:#eef3fb;">📅</div>
-      <div class="section-title">スケジュール</div>
+      <div class="section-num">02</div>
+      <div class="section-header-body">
+        <div class="section-title">スケジュール</div>
+        <div class="section-sub">2 DAYS ITINERARY</div>
+      </div>
     </div>
 
-    <div class="day-header" style="background:linear-gradient(135deg,#1e4d8c,#3a7bd5);color:white;">
-      <div class="day-num">DAY<br>1</div>
-      <div>
-        <div class="day-info-title">🎢 富士急ハイランドで絶叫！<br>夜はKAMADO BBQ🔥</div>
-        <div class="day-info-date">4月6日（月）</div>
+    <div class="day-header day-header--1">
+      <div class="day-display">DAY<span class="day-number">1</span></div>
+      <div class="day-meta">
+        <div class="day-meta-date">4月6日（月）</div>
+        <div class="day-meta-subtitle">富士急ハイランドで絶叫！<br>夜は KAMADO BBQ</div>
       </div>
     </div>
 
     <div class="timeline">
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#1e4d8c;">🌅</div>
-        <div class="tl-time">07:20 集合 ／ 07:35 出発</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🌅 07:20 集合 ／ 07:35 出発</div>
         <div class="tl-card">
           <div class="tl-title">バスタ新宿（南口）出発</div>
-          <div class="tl-desc">FJ1375便 1号車 → 富士急HL 09:05着<br>⚡ 07:20には1号車前に集合！遅刻厳禁</div>
-          <span class="tag" style="background:#eef3fb;color:#1e4d8c;">🚌 高速バス</span>
-          <!-- ✅ Google Maps リンク -->
+          <div class="tl-desc">FJ1375便 1号車 → 富士急HL 09:05着<br>07:20には1号車前に集合！遅刻厳禁</div>
+          <span class="tag" style="background:#E8EEFA;color:#2A5298;">🚌 高速バス</span>
           <br><a class="map-link" href="https://maps.google.com/?q=バスタ新宿" target="_blank">📍 バスタ新宿 地図</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#e87c2a;">🎡</div>
-        <div class="tl-time">09:05 〜 17:00</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🎡 09:05 〜 17:00</div>
         <div class="tl-card">
-          <div class="tl-title">富士急ハイランド 終日！🎢</div>
+          <div class="tl-title">富士急ハイランド 終日！</div>
           <div class="tl-desc">到着後まずコインロッカーへ🎒<br>開園直後に人気アトラクションへ一直線！<br>高飛車・FUJIYAMA・ええじゃないか…全制覇目指せ💪</div>
-          <span class="tag" style="background:#fff0e0;color:#a04000;">🎢 絶叫</span>
-          <span class="tag" style="background:#fff0e0;color:#a04000;">🍔 園内ランチ</span>
+          <span class="tag" style="background:#FBF0E3;color:#8B4F1C;">🎢 絶叫</span>
+          <span class="tag" style="background:#FBF0E3;color:#8B4F1C;">🍔 園内ランチ</span>
           <br><a class="map-link" href="https://maps.google.com/?q=富士急ハイランド" target="_blank">📍 富士急ハイランド 地図</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#9b59b6;">♨️</div>
-        <div class="tl-time">17:00〜18:30【オプション】</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">♨️ 17:00〜18:30 オプション</div>
         <div class="tl-card">
-          <div class="tl-title">ふじやま温泉（富士急HL 徒歩1分）♨️</div>
+          <div class="tl-title">ふじやま温泉（富士急HL 徒歩1分）</div>
           <div class="tl-desc">絶叫後の汗を流してから宿へ！富士山を眺める露天風呂が最高</div>
           <div class="opt-badge"><strong>💡 推奨</strong>　営業 10:00〜23:00 ／ 大人 約1,300円</div>
           <a class="map-link" href="https://maps.google.com/?q=ふじやま温泉+山梨" target="_blank">📍 地図で見る</a>
@@ -330,21 +412,21 @@
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#27ae60;">🛒</div>
-        <div class="tl-time">17:30〜18:30 ★重要★</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🛒 17:30〜18:30 — 重要</div>
         <div class="tl-card">
-          <div class="tl-title">オギノ河口湖店で BBQ食材 買い出し🛒</div>
+          <div class="tl-title">オギノ河口湖店で BBQ食材 買い出し</div>
           <div class="tl-desc">タクシーで河口湖方面へ。地元スーパー「オギノ」でBBQ食材をまとめ買い！</div>
           <div class="super-card">
-            <div style="font-weight:800;font-size:13px;color:#1a6b35;margin-bottom:7px;">🏪 オギノ 河口湖店</div>
-            <div style="font-size:13px;line-height:1.9;">
+            <div style="font-weight:700;font-size:13px;color:#2A6B3C;margin-bottom:7px;">🏪 オギノ 河口湖店</div>
+            <div style="font-size:13px;line-height:1.9;color:var(--ink);">
               📍 富士河口湖町船津545-3<br>
               📞 <a href="tel:0555726100">0555-72-6100</a><br>
               🕘 9:00〜21:00
             </div>
             <a class="map-link" href="https://maps.google.com/?q=オギノ河口湖店" target="_blank">📍 Google マップで開く</a>
           </div>
-          <div style="margin-top:12px;font-weight:800;font-size:12px;color:var(--orange);margin-bottom:7px;">🔥 おすすめ買い出しリスト</div>
+          <div style="margin-top:12px;font-weight:700;font-size:12px;color:var(--gold);margin-bottom:7px;">🔥 おすすめ買い出しリスト</div>
           <div class="bbq-grid">
             <div class="bbq-item"><div class="bbq-item-title">🥩 肉類</div><ul><li>牛カルビ</li><li>豚バラ</li><li>鶏モモ</li><li>ウインナー</li></ul></div>
             <div class="bbq-item"><div class="bbq-item-title">🥦 野菜</div><ul><li>玉ねぎ・ピーマン</li><li>なす・ズッキーニ</li><li>じゃがいも</li><li>とうもろこし</li></ul></div>
@@ -356,8 +438,8 @@
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#27ae60;">🚖</div>
-        <div class="tl-time">18:30〜19:00 移動</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🚖 18:30〜19:00 移動</div>
         <div class="tl-card">
           <div class="tl-title">オギノ → PICA富士西湖へ</div>
           <div class="route-card">
@@ -368,29 +450,29 @@
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#27ae60;">🏕️</div>
-        <div class="tl-time">19:00〜 チェックイン &amp; BBQ！</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🏕️ 19:00〜 チェックイン &amp; BBQ</div>
         <div class="tl-card">
-          <div class="tl-title">PICA富士西湖 到着 🔥 KAMADO BBQ開始！</div>
+          <div class="tl-title">PICA富士西湖 到着 — KAMADO BBQ開始！</div>
           <div class="tl-desc">チェックインしてすぐ火おこし！夜の西湖を眺めながら卒業BBQ大会🥩</div>
           <div class="facility-box">
-            <div class="facility-title">🏕️ Fire base KAMADO の設備</div>
+            <div class="facility-title">Fire base KAMADO の設備</div>
             <div class="facility-row">🔥 BBQグリル（60×40cm）＋ 焚き火台<br>🍳 キッチン（IH・電子レンジ・冷蔵庫・調理器具一式）<br>🚿 シャワー・バス・トイレ完備<br>💧 デッキシンク（お湯あり！後片付け楽ちん）</div>
           </div>
-          <span class="tag" style="background:#e8f5ee;color:#1a5c35;">🔥 焚き火</span>
-          <span class="tag" style="background:#e8f5ee;color:#1a5c35;">🥩 BBQ</span>
+          <span class="tag" style="background:#E3F2E8;color:#2A6B3C;">🔥 焚き火</span>
+          <span class="tag" style="background:#E3F2E8;color:#2A6B3C;">🥩 BBQ</span>
           <br><a class="map-link" href="https://maps.google.com/?q=PICA富士西湖" target="_blank">📍 PICA富士西湖 地図</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#1e4d8c;">🌌</div>
-        <div class="tl-time">夜〜深夜</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🌌 夜〜深夜</div>
         <div class="tl-card">
-          <div class="tl-title">焚き火 ＆ 星空 ＆ マシュマロ 🌟</div>
+          <div class="tl-title">焚き火 ＆ 星空 ＆ マシュマロ</div>
           <div class="tl-desc">食後は焚き火を囲んでマシュマロ焼き🔥<br>4月の西湖は空気が澄んで星空も絶品。最後の夜を全力で楽しもう。</div>
-          <span class="tag" style="background:#eef3fb;color:#1e4d8c;">🌟 星空</span>
-          <span class="tag" style="background:#eef3fb;color:#1e4d8c;">🍡 マシュマロ</span>
+          <span class="tag" style="background:#E8EEFA;color:#2A5298;">🌟 星空</span>
+          <span class="tag" style="background:#E8EEFA;color:#2A5298;">🍡 マシュマロ</span>
         </div>
       </div>
 
@@ -399,118 +481,118 @@
     <div class="divider"></div>
 
     <!-- DAY 2 -->
-    <div class="day-header" style="background:linear-gradient(135deg,#1a7a3f,#2d9e5f);color:white;" id="day2">
-      <div class="day-num">DAY<br>2</div>
-      <div>
-        <div class="day-info-title">🌸 富士山・河口湖 目一杯！<br>♨️ 温泉で最高の締め</div>
-        <div class="day-info-date">4月7日（火）→ 新宿 22時頃着</div>
+    <div class="day-header day-header--2" id="day2">
+      <div class="day-display">DAY<span class="day-number">2</span></div>
+      <div class="day-meta">
+        <div class="day-meta-date">4月7日（火）→ 新宿 22時頃着</div>
+        <div class="day-meta-subtitle">富士山・河口湖 目一杯！<br>温泉で最高の締め</div>
       </div>
     </div>
 
     <div class="timeline">
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#e8a020;">🌄</div>
-        <div class="tl-time">06:30〜07:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🌄 06:30〜07:30</div>
         <div class="tl-card">
           <div class="tl-title">起床 → 朝の西湖散策 📸</div>
           <div class="tl-desc">早起きして西湖越しの富士山を見よう！朝霧の中に浮かぶ富士山は絶景中の絶景。この旅一番の写真チャンス。</div>
-          <span class="tag" style="background:#fff0e0;color:#a06000;">🗻 早朝富士山</span>
+          <span class="tag" style="background:#FBF0E3;color:#8B4F1C;">🗻 早朝富士山</span>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#3a7bd5;">🍳</div>
-        <div class="tl-time">07:30〜08:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🍳 07:30〜08:30</div>
         <div class="tl-card">
-          <div class="tl-title">朝食（KAMADOキッチンで自炊）🍳</div>
+          <div class="tl-title">朝食（KAMADOキッチンで自炊）</div>
           <div class="tl-desc">昨日の残り食材で朝ごはん。卵焼き・ウインナー・パンでエネルギーチャージ！</div>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#3a7bd5;">🛶</div>
-        <div class="tl-time">08:30〜10:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🛶 08:30〜10:30</div>
         <div class="tl-card">
-          <div class="tl-title">【推奨A】西湖カヤック体験 🚣</div>
+          <div class="tl-title">【推奨A】西湖カヤック体験</div>
           <div class="tl-desc">穏やかな西湖に浮かびながら富士山を正面に見る絶景体験！4月の澄んだ空気の中、6人で漕ごう。</div>
           <div class="opt-badge"><strong>⚠️ 要事前予約</strong>　料金・空き状況は事前にPICA（0555-20-4555）に問い合わせを！</div>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#2d7a4f;">🏡</div>
-        <div class="tl-time">08:30〜10:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🏡 08:30〜10:30</div>
         <div class="tl-card">
-          <div class="tl-title">【推奨B】西湖いやしの里 根場 🏡</div>
+          <div class="tl-title">【推奨B】西湖いやしの里 根場</div>
           <div class="tl-desc">茅葺き屋根の古民家と富士山のコントラストが最高。4月は桜も咲いて3重の絶景。入場料：大人350円</div>
-          <span class="tag" style="background:#e8f5ee;color:#1a5c35;">🌸 桜×富士山</span>
+          <span class="tag" style="background:#E3F2E8;color:#2A6B3C;">🌸 桜×富士山</span>
           <br><a class="map-link" href="https://maps.google.com/?q=西湖いやしの里根場" target="_blank">📍 Google マップで開く</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#e87c2a;">📦</div>
-        <div class="tl-time">10:30〜11:00</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">📦 10:30〜11:00</div>
         <div class="tl-card">
-          <div class="tl-title">チェックアウト ⏰ 〜11:00厳守</div>
+          <div class="tl-title">チェックアウト — 11:00厳守</div>
           <div class="tl-desc">忘れ物チェック・ゴミ分別を全員で！1人がまとめて対応しよう。</div>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#3a7bd5;">🌸</div>
-        <div class="tl-time">11:30〜12:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🌸 11:30〜12:30</div>
         <div class="tl-card">
-          <div class="tl-title">大石公園 — 富士山ビュー No.1🌸</div>
+          <div class="tl-title">大石公園 — 富士山ビュー No.1</div>
           <div class="tl-desc">河口湖北岸の公園。4月はチューリップ＆桜が咲き乱れ、富士山との写真が最強。入場無料。</div>
-          <span class="tag" style="background:#eef3fb;color:#1e4d8c;">🗻 絶景</span>
-          <span class="tag" style="background:#eef3fb;color:#1e4d8c;">🌸 無料</span>
+          <span class="tag" style="background:#E8EEFA;color:#2A5298;">🗻 絶景</span>
+          <span class="tag" style="background:#E8EEFA;color:#2A5298;">🌸 無料</span>
           <br><a class="map-link" href="https://maps.google.com/?q=大石公園+河口湖" target="_blank">📍 Google マップで開く</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#e87c2a;">🍜</div>
-        <div class="tl-time">12:30〜13:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🍜 12:30〜13:30</div>
         <div class="tl-card">
-          <div class="tl-title">ランチ — 山梨名物ほうとう 🍜</div>
+          <div class="tl-title">ランチ — 山梨名物ほうとう</div>
           <div class="tl-desc">太い平打ち麺の味噌煮込み。旅の疲れに染みる山梨の魂のグルメ😭<br><strong>ほうとう不動 河口湖北本店</strong>が有名。1,300円〜</div>
-          <span class="tag" style="background:#fff0e0;color:#a04000;">🍜 山梨グルメ</span>
+          <span class="tag" style="background:#FBF0E3;color:#8B4F1C;">🍜 山梨グルメ</span>
           <br><a class="map-link" href="https://maps.google.com/?q=ほうとう不動+河口湖北本店" target="_blank">📍 Google マップで開く</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#1e4d8c;">🚠</div>
-        <div class="tl-time">14:00〜15:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🚠 14:00〜15:30</div>
         <div class="tl-card">
-          <div class="tl-title">富士山パノラマロープウェイ 🚠</div>
+          <div class="tl-title">富士山パノラマロープウェイ</div>
           <div class="tl-desc">3分で標高1,075m！富士山・河口湖・南アルプスの360°絶景。カチカチ山のたぬき🦝と写真も定番。往復 大人1,000円</div>
-          <span class="tag" style="background:#eef3fb;color:#1e4d8c;">🚠 カチカチ山</span>
+          <span class="tag" style="background:#E8EEFA;color:#2A5298;">🚠 カチカチ山</span>
           <br><a class="map-link" href="https://maps.google.com/?q=富士山パノラマロープウェイ" target="_blank">📍 Google マップで開く</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#e87c2a;">🛍️</div>
-        <div class="tl-time">15:30〜16:30</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🛍️ 15:30〜16:30</div>
         <div class="tl-card">
-          <div class="tl-title">河口湖駅周辺 お土産タイム 🛍️</div>
+          <div class="tl-title">河口湖駅周辺 お土産タイム</div>
           <div class="tl-desc">信玄餅・桔梗信玄餅・ほうとうセット・富士山グッズをゲット！</div>
           <br><a class="map-link" href="https://maps.google.com/?q=河口湖駅" target="_blank">📍 河口湖駅 地図</a>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#c0196a;">♨️</div>
-        <div class="tl-time">16:30〜18:30 ★締めの温泉★</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">♨️ 16:30〜18:30 — 締めの温泉</div>
         <div class="tl-card">
-          <div class="tl-title">日帰り温泉で2日間の疲れを癒す ♨️</div>
+          <div class="tl-title">日帰り温泉で2日間の疲れを癒す</div>
           <div class="tl-desc">遅い帰宅を活かした最高の締めくくり！</div>
           <div class="onsen-card">
-            <div class="onsen-title">♨️ おすすめ温泉 2選</div>
-            <div style="font-size:13px;color:var(--text);line-height:1.9;">
+            <div class="onsen-title">おすすめ温泉 2選</div>
+            <div style="font-size:13px;color:var(--ink);line-height:1.9;">
               <strong>① ふじやま温泉</strong>（富士急HL隣接）<br>
               　富士山を望む露天風呂 ／ 〜23:00 ／ 大人1,300円〜<br><br>
               <strong>② より道の湯</strong>（富士吉田）<br>
@@ -521,25 +603,25 @@
               <a class="map-link" href="https://maps.google.com/?q=より道の湯+富士吉田" target="_blank">📍 より道の湯</a>
             </div>
           </div>
-          <span class="tag" style="background:#fce8ee;color:#c0196a;">♨️ 露天風呂</span>
+          <span class="tag" style="background:#FAEBEA;color:#C45B52;">♨️ 露天風呂</span>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#1e4d8c;">🚌</div>
-        <div class="tl-time">19:30〜20:30 出発</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🚌 19:30〜20:30 出発</div>
         <div class="tl-card">
-          <div class="tl-title">河口湖駅 → 新宿 高速バス 🚌</div>
+          <div class="tl-title">河口湖駅 → 新宿 高速バス</div>
           <div class="tl-desc">富士急バス・京王バス（約1時間45分〜2時間）</div>
           <div class="highlight">💡 <strong>帰りのバスも事前予約必須！</strong><br>19:30〜20:30発 → <strong>21:30〜22:30頃 新宿着</strong> 🏙️</div>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-dot" style="background:#e87c2a;">🎉</div>
-        <div class="tl-time">21:30〜22:30 頃</div>
+        <div class="tl-dot"></div>
+        <div class="tl-time">🎉 21:30〜22:30 頃</div>
         <div class="tl-card">
-          <div class="tl-title">🎉 新宿到着！最高の卒業旅行 完了！</div>
+          <div class="tl-title">新宿到着！最高の卒業旅行 完了！</div>
           <div class="tl-desc">2日間お疲れ様！最高の思い出できたね🗻✨</div>
         </div>
       </div>
@@ -550,21 +632,24 @@
   <!-- BUS -->
   <div class="section" id="bus">
     <div class="section-header">
-      <div class="section-icon" style="background:#fff0e0;">🚌</div>
-      <div class="section-title">バス座席情報（行き）</div>
+      <div class="section-num">03</div>
+      <div class="section-header-body">
+        <div class="section-title">バス座席情報</div>
+        <div class="section-sub">OUTBOUND · FJ1375</div>
+      </div>
     </div>
     <div class="card">
       <div class="info-row"><div class="info-label">便名</div><div class="info-value">FJ1375（新宿〜富士急HL線）</div></div>
       <div class="info-row"><div class="info-label">出発</div><div class="info-value"><strong>07:35</strong> バスタ新宿（南口）→ 富士急ハイランド <strong>09:05着</strong></div></div>
       <div class="info-row"><div class="info-label">号車</div><div class="info-value">1号車</div></div>
       <div style="padding-top:12px;">
-        <div style="font-size:11px;font-weight:700;color:var(--fuji-blue);margin-bottom:8px;">座席番号（6席）</div>
+        <div style="font-size:10px;font-weight:700;color:var(--blue);margin-bottom:8px;letter-spacing:0.1em;text-transform:uppercase;">座席番号（6席）</div>
         <div class="seat-grid">
           <div class="seat-badge">02D</div><div class="seat-badge">03A</div><div class="seat-badge">03B</div>
           <div class="seat-badge">07A</div><div class="seat-badge">07B</div><div class="seat-badge">09A</div>
         </div>
       </div>
-      <div class="alert" style="background:#fff3cd;margin-top:14px;">
+      <div class="alert" style="background:#FBF8F2;margin-top:14px;">
         <div class="alert-icon">⚠️</div>
         <div class="alert-body"><strong>07:20までに1号車前に集合！</strong></div>
       </div>
@@ -574,8 +659,11 @@
   <!-- HOTEL -->
   <div class="section" id="hotel">
     <div class="section-header">
-      <div class="section-icon" style="background:#e8f5ee;">🏕️</div>
-      <div class="section-title">宿泊施設</div>
+      <div class="section-num">04</div>
+      <div class="section-header-body">
+        <div class="section-title">宿泊施設</div>
+        <div class="section-sub">ACCOMMODATION</div>
+      </div>
     </div>
     <div class="card">
       <div class="info-row"><div class="info-label">施設名</div><div class="info-value" style="font-weight:800;font-size:15px;">PICA富士西湖</div></div>
@@ -596,11 +684,14 @@
   <!-- ROUTE -->
   <div class="section" id="route">
     <div class="section-header">
-      <div class="section-icon" style="background:#f0e8fd;">🗺️</div>
-      <div class="section-title">移動まとめ</div>
+      <div class="section-num">05</div>
+      <div class="section-header-body">
+        <div class="section-title">移動まとめ</div>
+        <div class="section-sub">ROUTE SUMMARY</div>
+      </div>
     </div>
     <div class="card">
-      <div style="font-weight:800;font-size:14px;color:var(--fuji-blue);margin-bottom:10px;">1日目</div>
+      <div style="font-weight:700;font-size:13px;color:var(--blue);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase;">Day 1</div>
       <div class="route-card">
         <div class="route-step">🚌 バスタ新宿 07:35 <span class="route-badge">高速バス 90分</span></div>
         <div class="route-step">↓</div>
@@ -612,28 +703,31 @@
         <div class="route-step">↓</div>
         <div class="route-step">🏕️ PICA富士西湖 <span class="route-badge">タクシー 25分</span></div>
       </div>
-      <div style="font-weight:800;font-size:14px;color:var(--green);margin:16px 0 10px;">2日目</div>
-      <div class="route-card" style="background:linear-gradient(135deg,#f0fff4,#e8f8ee);border-color:#82c896;">
+      <div style="font-weight:700;font-size:13px;color:var(--forest);margin:16px 0 10px;letter-spacing:0.06em;text-transform:uppercase;">Day 2</div>
+      <div class="route-card" style="background:#F2F7F3;border-color:#C5D8C8;">
         <div class="route-step">🏕️ PICA チェックアウト 11:00</div>
         <div class="route-step">↓</div>
-        <div class="route-step">🌸 大石公園・河口湖観光 <span class="route-badge" style="background:#2d7a4f;">バス/タクシー 20分</span></div>
+        <div class="route-step">🌸 大石公園・河口湖観光 <span class="route-badge" style="background:#2A6B3C;">バス/タクシー 20分</span></div>
         <div class="route-step">↓</div>
         <div class="route-step">🚠 ロープウェイ → お土産</div>
         <div class="route-step">↓</div>
         <div class="route-step">♨️ 日帰り温泉 16:30〜18:30</div>
         <div class="route-step">↓</div>
-        <div class="route-step">🚌 河口湖駅 19:30〜20:30発 <span class="route-badge" style="background:#2d7a4f;">高速バス 2時間</span></div>
+        <div class="route-step">🚌 河口湖駅 19:30〜20:30発 <span class="route-badge" style="background:#2A6B3C;">高速バス 2時間</span></div>
         <div class="route-step">↓</div>
         <div class="route-step">🏙️ 新宿 21:30〜22:30着 🎉</div>
       </div>
     </div>
   </div>
 
-  <!-- PACKING ✅ 機能するチェックボックス -->
+  <!-- PACKING -->
   <div class="section" id="pack">
     <div class="section-header">
-      <div class="section-icon" style="background:#f0e8fd;">🎒</div>
-      <div class="section-title">持ち物チェックリスト</div>
+      <div class="section-num">06</div>
+      <div class="section-header-body">
+        <div class="section-title">持ち物チェックリスト</div>
+        <div class="section-sub">PACKING LIST</div>
+      </div>
     </div>
     <div class="card">
       <ul class="checklist" id="checkList">
@@ -659,13 +753,16 @@
   <!-- NOTES -->
   <div class="section" id="notes">
     <div class="section-header">
-      <div class="section-icon" style="background:#fff0e0;">📢</div>
-      <div class="section-title">注意事項 &amp; 連絡先</div>
+      <div class="section-num">07</div>
+      <div class="section-header-body">
+        <div class="section-title">注意事項 &amp; 連絡先</div>
+        <div class="section-sub">NOTICES &amp; CONTACTS</div>
+      </div>
     </div>
-    <div class="alert" style="background:#fce8ee;"><div class="alert-icon">🚌</div><div class="alert-body"><div class="alert-title">帰りのバスは事前予約必須！</div>河口湖→新宿は人気路線。出発前に予約を。富士急バス・京王バス両方OK。</div></div>
-    <div class="alert" style="background:#e8f5ee;"><div class="alert-icon">❄️</div><div class="alert-body"><div class="alert-title">服装 — 朝晩は5〜10℃！</div>日中は15〜18℃で快適だが朝晩は冷える。フリース・上着必須。重ね着で対応。</div></div>
-    <div class="alert" style="background:#eef3fb;"><div class="alert-icon">📶</div><div class="alert-body"><div class="alert-title">電波が弱い場所あり</div>Google マップをオフラインDLしておくと安心！</div></div>
-    <div class="alert" style="background:#fff0e0;"><div class="alert-icon">💰</div><div class="alert-body"><div class="alert-title">現金は1人1.5万円以上が目安</div>温泉・タクシー・食材・お土産…現金需要が多い。ATMはコンビニで。</div></div>
+    <div class="alert" style="background:#FAEBEA;"><div class="alert-icon">🚌</div><div class="alert-body"><div class="alert-title">帰りのバスは事前予約必須！</div>河口湖→新宿は人気路線。出発前に予約を。富士急バス・京王バス両方OK。</div></div>
+    <div class="alert" style="background:#E8F4EA;"><div class="alert-icon">❄️</div><div class="alert-body"><div class="alert-title">服装 — 朝晩は5〜10℃！</div>日中は15〜18℃で快適だが朝晩は冷える。フリース・上着必須。重ね着で対応。</div></div>
+    <div class="alert" style="background:#EEF3FB;"><div class="alert-icon">📶</div><div class="alert-body"><div class="alert-title">電波が弱い場所あり</div>Google マップをオフラインDLしておくと安心！</div></div>
+    <div class="alert" style="background:#FBF4E8;"><div class="alert-icon">💰</div><div class="alert-body"><div class="alert-title">現金は1人1.5万円以上が目安</div>温泉・タクシー・食材・お土産…現金需要が多い。ATMはコンビニで。</div></div>
     <div class="card" style="margin-top:4px;">
       <div class="info-row"><div class="info-label">PICA</div><div class="info-value"><a href="tel:0555204555">0555-20-4555</a>（9:00〜16:00）</div></div>
       <div class="info-row"><div class="info-label">オギノ</div><div class="info-value"><a href="tel:0555726100">0555-72-6100</a>（9:00〜21:00）</div></div>
@@ -676,12 +773,12 @@
 
 </div>
 
-<div class="footer">
-  <span class="footer-emoji">🗻</span>
-  最高の卒業旅行になりますように！<br>
-  6人で最高の思い出を作ろう 🌸🔥✨<br><br>
-  <span style="opacity:0.5;font-size:11px;">2026.04.06 Mon〜2026.04.07 Tue ／ 富士急ハイランド ＆ 河口湖・西湖</span>
-</div>
+<footer class="footer">
+  <div class="footer-rule"></div>
+  <div class="footer-brand">FUJI TRIP 2026</div>
+  <p class="footer-body">最高の卒業旅行になりますように。</p>
+  <p class="footer-meta">2026.04.06 Mon — 2026.04.07 Tue<br>富士急ハイランド ＆ 河口湖・西湖エリア</p>
+</footer>
 
 <script>
   // ✅ チェック状態をlocalStorageに保存（ページ再読込後も維持）
